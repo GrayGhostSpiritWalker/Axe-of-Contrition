@@ -1,4 +1,4 @@
 {
-  title: "",
-  tags: []
+  title: "First Post",
+  tags: [ "first-post" ]
 }
