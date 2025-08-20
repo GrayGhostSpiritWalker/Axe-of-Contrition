@@ -1,4 +1,7 @@
 {
   #search keys, tags, labels hashtags on articles
-  "first-post": [ "8-20-25" ]
+  "first-post": [ "8-20-25" ],
+  "the-tag": [
+    # comma separated date in quotes as above
+  ]
 }
