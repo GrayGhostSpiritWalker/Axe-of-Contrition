@@ -1,0 +1,45 @@
+:root {
+  --background-color: #2c2a2a;
+  --color: #d9d1bf;
+  --global-font-size: 1.375lh;
+}
+
+html, body, main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-size: var(--global-font-size);
+}
+
+.column, .row { display: flex; }
+.column.inline, .row.inline { display: inline-flex; }
+.column { flex-direction: column; }
+
+.shrink, .shrink-content > * { flex: 0 1 auto; }
+
+.no-overflow { overflow: hidden; }
+
+.no-wrap { flex-wrap: nowrap; text-wrap: nowrap; }
+
+.align { align-items: center; }
+
+.left-items { justify-content: start; }
+.center-items { justify-content: center; }
+.right-items { justify-content: end; }
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+.pointer, .pointers > * {
+  cursor: pointer;
+}
+
+.no-select {
+  user-select: none;
+}

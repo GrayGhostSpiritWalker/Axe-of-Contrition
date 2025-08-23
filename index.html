@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <link rel="stylesheet" type="text/css" href="page-view.css">
     <meta charset="utf-8" />
   </head>
   <body>
-    <main>
+    <main class="layout column center">
+      <header id="header" class="header column shrink center">
+        <div id="logo" class="logo center no-select"></div>
+        <nav id="nav" class="nav column shrink align">
+          <div id="browse-articles" class="browse-search row align center-items">
+            <ul id="article-range" class="range row align no-select shrink-content">
+              <li id="browse-back" class="browse pointer">⮜</li>
+              <li id="browsing-range" class="month">August 2025</li>
+              <li id="browse-forward" class="browse pointer">⮞</li>
+            </ul>
+            <input id="search-articles" class="search" type="search" placeholder="&#x1f50d;&#xfe0e; Search All Articles"/>
+          </div>
+          <div id="article-tabs" class="tabs no-select no-overflow pointers no-wrap">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </nav>
+      </header>
+      <div id="articles" class="articles layout column inline shrink"></div>
     </main>
     <script src="index.js" type="module"></script>
   </body>

@@ -1,0 +1,69 @@
+:root {
+  --layout-gap: 1.5lh; /* gap between logo + search ( page header ) and articles sections ( page content ) */
+  --layout-padding: 2lh; /* whole page as well as article padding */
+  --header-gap: 0.75lh; /* gap between logo, search and item tabs scroller ( within the header ) */
+  --nav-gap: 0.5lh; /* gap between left-arrow, month-year and right-arrow */
+  --search-background-color: #444; /* search bar background color */
+  --search-color: #dbd8c8; /* search bar text color */
+  --search-border-radius: 0.25lh; /* search bar corner radius */
+  --search-width: 18em; /* search bar width */
+  --search-font-size: 1lh; /* (hack/fix) force search bar to inherit the current global font size */
+  --search-placeholder-color: #918e7e; /* when nothing is entered into the search bar, the color of the magnifier icon and prompt text */
+  --browse-search-gap: 1lh; /* gap between the month-year arrows group and the search bar */
+  --tabs-icon: "○"; /* article tabulation bar glyph */
+  --logo-font: "Quicksand";
+  --logo-font-weight: 700;
+  --article-font: "Quicksand";
+  --article-font-weight: 500;
+}
+
+.logo {
+  font-family: var(--article-font, sans-serif);
+  font-optical-sizing: auto;
+  font-weight: var(--article-font-weight);
+  font-style: normal;
+}
+
+.articles {
+  font-family: var(--logo-font, sans-serif);
+  font-optical-sizing: auto;
+  font-weight: var(--logo-font-weight);
+  font-style: normal;
+}
+
+.layout { padding: var(--layout-padding); }
+
+.layout { gap: var(--layout-gap); }
+.header { gap: var(--header-gap); }
+.nav { gap: var(--nav-gap); }
+
+/* browse-search lists padding reset */
+.range, .browse, .month {
+  margin: 0;
+  padding: 0;
+}
+
+.search {
+  background-color: var(--search-background-color);
+  color: var(--search-radius);
+  border-radius: var(--search-border-radius);
+  width: var(--search-width);
+  font-size: var(--search-font-size);
+}
+
+.search::placeholder { color: var(--search-placeholder-color); }
+
+.range > li {
+  list-style: none;
+}
+
+.browse-search { gap: 1lh; }
+.range { gap: 0.5lh; }
+.tabs { gap: 0.5lh; }
+
+.tabs i:after {
+  content: var(--tabs-icon);
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+}
