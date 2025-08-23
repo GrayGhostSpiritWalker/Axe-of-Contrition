@@ -3,32 +3,55 @@
   --layout-padding: 2lh; /* whole page as well as article padding */
   --header-gap: 0.75lh; /* gap between logo, search and item tabs scroller ( within the header ) */
   --nav-gap: 0.5lh; /* gap between left-arrow, month-year and right-arrow */
+  --browse-search-gap: 1lh; /* gap between the month-year arrows group and the search bar */
+  --range-gap: 0.5lh; /* gap between month-year range and month-year arrows */
+  --tabs-gap: 0.5lh; /* gap between article tabulation glyphs */
   --search-background-color: #444; /* search bar background color */
   --search-color: #dbd8c8; /* search bar text color */
   --search-border-radius: 0.25lh; /* search bar corner radius */
   --search-width: 18em; /* search bar width */
   --search-font-size: 1lh; /* (hack/fix) force search bar to inherit the current global font size */
-  --search-placeholder-color: #918e7e; /* when nothing is entered into the search bar, the color of the magnifier icon and prompt text */
-  --browse-search-gap: 1lh; /* gap between the month-year arrows group and the search bar */
+  --search-placeholder-color: #918e7e; /* when nothing is entered into the search bar, the color of the magnifier icon and prompt text */  
   --tabs-icon: "○"; /* article tabulation bar glyph */
   --logo-font: "Quicksand";
   --logo-font-weight: 700;
+  --logo-font-size: 4lh;
+  --logo-gap: 0.75lh;
   --article-font: "Quicksand";
   --article-font-weight: 500;
 }
 
-.logo {
+.articles {
   font-family: var(--article-font, sans-serif);
   font-optical-sizing: auto;
   font-weight: var(--article-font-weight);
   font-style: normal;
 }
 
-.articles {
+.logo {
   font-family: var(--logo-font, sans-serif);
   font-optical-sizing: auto;
   font-weight: var(--logo-font-weight);
   font-style: normal;
+  font-size: var(--logo-font-size);
+  font-variant: small-caps;
+}
+
+.anchor {
+  position: relative;
+}
+
+.axe, .guitar {
+  position: absolute;
+  filter: brightness(50%) sepia(100%) saturate(100%) hue-rotate(-30deg);
+}
+
+.axe {
+  transform: scale(40%) translate(-70%, -65%) rotate(0.02turn);
+}
+
+.guitar {
+  transform: scale(40%) translate(-100%, -30%) rotate(-0.33turn);
 }
 
 .layout { padding: var(--layout-padding); }
@@ -36,6 +59,11 @@
 .layout { gap: var(--layout-gap); }
 .header { gap: var(--header-gap); }
 .nav { gap: var(--nav-gap); }
+
+.browse-search { gap: var(--browse-search-gap); }
+.range { gap: var(--range-gap); }
+.tabs { gap: var(--tabs-gap); }
+.logo { gap: var(--logo-gap); }
 
 /* browse-search lists padding reset */
 .range, .browse, .month {
@@ -56,10 +84,6 @@
 .range > li {
   list-style: none;
 }
-
-.browse-search { gap: 1lh; }
-.range { gap: 0.5lh; }
-.tabs { gap: 0.5lh; }
 
 .tabs i:after {
   content: var(--tabs-icon);
